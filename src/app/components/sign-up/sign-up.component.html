@@ -1,0 +1,33 @@
+<div class="displayTable">
+    <div class="displayTableCell">
+  
+      <div class="authBlock">
+        <h3>Enter details below to access My Duka</h3>
+  
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Your duka name" #userDukaName required>
+        </div>
+
+        <div class="formGroup">
+          <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+        </div>
+        
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Phone number" #userPhoneNumber required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="Access My Duka" (click)="authService.SignUp(userDukaName.value,userPhoneNumber.value,userEmail.value)">
+        </div>
+  
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+   
+  
+      <div class="redirectToLogin">
+        <span>Already have a code? <span class="redirect" routerLink="/sign-in">Enter Code</span></span>
+      </div>
+    </div>
+  
+  </div>
